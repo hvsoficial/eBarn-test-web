@@ -1,0 +1,52 @@
+<div>
+  <nav>
+    <a class="badge1 badge-transparent" routerLink="/tractors">
+      <svg class="material-icons" width="20" height="20" viewBox="0 0 24 24">
+        <path
+          d="M6.414 5A1 1 0 105 6.414L10.586 12 5 17.586A1 1 0 106.414 19L12 13.414 17.586 19A1 1 0 1019 17.586L13.414 12 19 6.414A1 1 0 1017.586 5L12 10.586 6.414 5z"
+          fill="rgb(105, 103, 103" />
+      </svg>
+    </a>
+  </nav>
+</div>
+
+
+<div class="content" role="main">
+  <div *ngIf="currentTractor.id" class="edit-form">
+    <form>
+      <div class="form-group-text">
+        <label for="title">Name Tractor</label>
+        <input type="text" class="form-control" id="title" [(ngModel)]="currentTractor.title" name="title" />
+      </div>
+      <!-- editar e atualizar para o modelo adicionar box viwer image
+      <div class="form-group-text">
+        <label for="title">Name Tractor</label>
+        <input type="text" class="form-control" id="title" [(ngModel)]="currentTractor.title" name="title" />
+      </div>
+    -->
+    </form>
+    <div class="card-container">
+
+      <button class="card1" (click)="deleteTractor()">
+        <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M15 4V3H9v1H4v2h1v13c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V6h1V4h-5zm2 15H7V6h10v13z" fill="#ff4d4d" />
+          <path d="M9 8h2v9H9zm4 0h2v9h-2z" fill="#ff4d4d"></path>
+        </svg>
+        <span>Delete</span>
+      </button>
+
+      <button type="submit" class="card2" (click)="updateTractor()">
+        <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" fill="#00bf71" />
+        </svg>
+        <span>Salve</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- olhar posicoa dessas div a baixo-->
+  <div *ngIf="!currentTractor.id">
+    <br />
+    <p>Cannot access this Tractor...</p>
+  </div>
+</div>

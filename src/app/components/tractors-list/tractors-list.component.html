@@ -1,0 +1,60 @@
+<div class="content" role="main">
+  <!-- retirar -->
+  <div class="list row">
+    <div class="col-md-8">
+      <!--div class="input-group mb-4">
+        <input type="text" class="form-control" placeholder="Search by name" [(ngModel)]="title" />
+         <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button">
+          <svg width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M13 8h-8v-1h8v1zm0 2h-8v-1h8v1zm-3 2h-5v-1h5v1zm11.172 12l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
+          </svg>
+        </button>
+      </div>
+      </div>  -->
+    </div>
+
+
+    <div class="col-md-6" style="width: 300px;">
+      <h4>Tractors List</h4>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let tractor of tractors; let i = index" [class.active]="i == currentIndex"
+          (click)="setActiveTractor(tractor, i)">
+          {{ tractor.title }}
+        </li>
+      </ul>
+
+      <!--
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTractors()">
+        Remove All
+      </button>
+      -->
+
+    </div>
+
+
+    <div class="col-md-6">
+      <div *ngIf="currentTractor.id">
+        <h4>Tractor</h4>
+        <div>
+          <label><strong>Tractor name:</strong></label> {{ currentTractor.title }}
+        </div>
+        <!-- editar e atualizar para o modelo adicionar box viwer image  -->
+        <div>
+          <label><strong>Tractor name:</strong></label>
+          {{ currentTractor.title }}
+        </div>
+        <a class="badge badge-warning" routerLink="/tractors/{{ currentTractor.id }}">
+          Edit
+        </a>
+      </div>
+
+      <!-- olhar posicoa dessas div a baixo-->
+      <div *ngIf="!currentTractor">
+        <br />
+        <p>Please click on a Tractor...</p>
+      </div>
+    </div>
+  </div>
+</div>

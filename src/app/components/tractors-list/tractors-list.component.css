@@ -1,0 +1,44 @@
+table {
+  width: 100%;
+}
+
+.content {
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  margin: auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-control {
+  margin-right: 5px;
+  border-radius: 20px;
+}
+
+.form-control:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  background-color: transparent;
+}
+
+.form-control:not(.highlight-card):hover .material-icons path {
+  fill: rgb(0, 0, 0);
+}
+
+.btn {
+  border-radius: 20px;
+  border: transparent;
+}
+
+.btn:not(.highlight-card):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  background-color: transparent;
+}
+
+.btn:not(.highlight-card):hover .material-icons path {
+  fill: rgb(0, 0, 0);
+}
